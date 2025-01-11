@@ -2,37 +2,22 @@
 	<div class="container text-center">
 		<h2 class="fw-bold">Contact Us</h2>
 		<p class="mb-4">
-			Ready to transform your ideas into reality? Let’s connect.
+			Struggling with an issue? Let us step in and find the solution.
 		</p>
 		<div class="row justify-content-center">
 			<div class="col-md-6">
-				<form>
+				<form method="post" action="/api/contact">
 					<div class="mb-3">
-						<label for="name" class="form-label">Name</label>
-						<input
-							type="text"
-							class="form-control"
-							id="name"
-							placeholder="John Doe"
-						/>
+						{{!-- <label for="name" class="form-label">Name</label> --}}
+						<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" />
 					</div>
 					<div class="mb-3">
-						<label for="email" class="form-label">Email</label>
-						<input
-							type="email"
-							class="form-control"
-							id="email"
-							placeholder="you@example.com"
-						/>
+						{{!-- <label for="email" class="form-label">Email</label> --}}
+						<input type="email" name="email" class="form-control" id="email" placeholder="your@email.com" />
 					</div>
 					<div class="mb-3">
-						<label for="message" class="form-label">Message</label>
-						<textarea
-							class="form-control"
-							id="message"
-							rows="4"
-							placeholder="How can we help?"
-						></textarea>
+						{{!-- <label for="message" class="form-label">Message</label> --}}
+						<textarea class="form-control" name="message" id="message" rows="4" placeholder="Your problem "></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">
 						<i class="fas fa-paper-plane"></i> Send

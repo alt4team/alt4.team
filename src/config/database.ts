@@ -2,7 +2,11 @@ import mongoose from 'mongoose';
 
 const connectDatabase = async (): Promise<void> => {
 	try {
-		const uri = process.env.MONGO_URI || 'mongodb://localhost:27017/mydb';
+		const uri = process.env.MONGO_URI;
+		if (uri === undefined) {
+			console.log('Database not configured');
+			return;
+		}
 		await mongoose.connect(uri);
 		console.log('Connected to MongoDB');
 	} catch (error) {

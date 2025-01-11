@@ -12,7 +12,7 @@ COPY . .
 
 RUN bun run build
 
-FROM ubuntu:latest AS runner
+FROM oven/bun:alpine AS runner
 
 WORKDIR /usr/src/app
 

@@ -3,6 +3,8 @@ function openLoader() {
   loader.classList.add("display");
 }
 
+openLoader();
+
 function closeLoader() {
   const loader = document.getElementById("loader");
   loader.classList.remove("display");
@@ -40,11 +42,10 @@ themeSwitchBtn.addEventListener("click", () => {
 	applyTheme(new_theme);
 });
 
+
 document.addEventListener("DOMContentLoaded", async function () {
   await initializePreferences();
   closeLoader();
-
-	document.getElementById("year").textContent = new Date().getFullYear();
 });
 
 

@@ -16,9 +16,9 @@ body {
 }
 
 .dark-theme {
-	--primary: #fc6480;
-	--secondary: #4891db;
-	--accent: #c57334;
+	--primary: #9b031f;
+	--secondary: #246eb7;
+	--accent: #cb783a;
 	--background: #070603;
 	--text: #c8ddfe;
 }

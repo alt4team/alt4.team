@@ -1,16 +1,21 @@
 import Joi from 'joi';
 
-const validateString = (fieldName: string, min: number, max: number, required = true) => {
-	let schema = Joi.string().min(min).max(max);
+const validateString = (fieldName: string, required = true, min?: number, max?: number) => {
+	let schema = min && max ? Joi.string().min(min).max(max) : Joi.string();
 
 	if (required) {
-		schema = schema.required().messages({
+		const messages: any = {
 			'string.base': `"${fieldName}" should be a type of text`,
 			'string.empty': `"${fieldName}" cannot be empty`,
-			'string.min': `"${fieldName}" should have at least ${min} characters`,
-			'string.max': `"${fieldName}" should have at most ${max} characters`,
 			'any.required': `"${fieldName}" is required`,
-		});
+		};
+
+		if (min && max) {
+			messages['string.min'] = `"${fieldName}" should have at least ${min} characters`;
+			messages['string.max'] = `"${fieldName}" should have at most ${max} characters`;
+		}
+
+		schema = schema.required().messages(messages);
 	}
 
 	return schema;
