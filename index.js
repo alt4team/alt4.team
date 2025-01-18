@@ -47,5 +47,3 @@ document.addEventListener("DOMContentLoaded", async function () {
   await initializePreferences();
   closeLoader();
 });
-
-

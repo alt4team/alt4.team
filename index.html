@@ -352,17 +352,17 @@
 		</p>
 		<div class="row justify-content-center">
 			<div class="col-md-6">
-				<form method="post" action="https://api.formbee.dev/formbee/a90b6f70-0363-43a9-a8b5-ac86af711f96" enctype="multipart/form-data">
+				<form action="#">
 					<div class="mb-3">
-						<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" />
+						<input type="text" name="name" class="form-control" id="form_name" placeholder="Your Name" />
 					</div>
 					<div class="mb-3">
-						<input type="email" name="email" class="form-control" id="email" placeholder="your@email.com" />
+						<input type="email" name="email" class="form-control" id="form_email" placeholder="your@email.com" />
 					</div>
 					<div class="mb-3">
-						<textarea class="form-control" name="message" id="message" rows="4" placeholder="Your problem "></textarea>
+						<textarea class="form-control" name="message" id="form_message" rows="4" placeholder="Your problem "></textarea>
 					</div>
-					<button type="submit" class="btn btn-primary">
+					<button id="submit_form" class="btn btn-primary">
 						<i class="fas fa-paper-plane"></i> Send
 					</button>
 				</form>
@@ -376,6 +376,7 @@
 
 <script src="/bootstrap.bundle.min.js"></script>
 <script src="/index.js"></script>
+<script type="module" src="/email.js"></script>
 
 
 </body>
